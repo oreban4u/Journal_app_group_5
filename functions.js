@@ -5,7 +5,7 @@ userData = {'oreban4u':{'password:'12345','firstname':'Oreoluwa','lastname':'Ban
             }
     
 
-function createUser(username, password){
+function userLogin(username, password){
     if (password === userData.username.password){
         return userData.username;
     }
