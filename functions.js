@@ -13,3 +13,17 @@ function userLogin(username, password){
         return "Invalid Username or Password";
     }
 }
+var samplearticleData = {'francis':[{'pubid': 1,'title': 'My first post', 'fullarticle':'hello, how are you this is the full article' },{'pubid': 2,'title': 'My second post', 'fullarticle':'hello, how are you this is the full article' }] ,'oreban4u':[{'pubid': 1,'title': 'My first post2', 'fullarticle':'hello, how are you this is the full article2' }] } //the values is a list of dictionary
+
+
+
+function createJournalEntry(username, title, fullarticle){
+    if (sampledata.username === undefined){
+        sampledata.username = [];
+        sampledate.username.push({'pubid':1,'title':title,'fullarticle':fullarticle});
+    }
+    else{
+        sampledata.username.push({'pubid':sampledata.username.pubid + 1,'title':title,'fullarticle':fullarticle})
+    }
+    
+}
