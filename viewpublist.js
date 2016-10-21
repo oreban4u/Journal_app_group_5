@@ -5,11 +5,12 @@ var samplearticleData= {'francis':[{'pubid': 1,'title': 'My first post', 'fullar
 function viewlistofpub(username, datadict){
 	//returns a dictionary {publist}
 	var listofData=datadict[username]
-	var stingAccumulator=""
+	var stingAccumulator=[]
 	for (var i=0; i<listofData.length;i++){
-		stingAccumulator=stingAccumulator + '\n' +listofData[i]['title'] + '\n'
+		stingAccumulator.push(listofData[i]['title'])
+		//stingAccumulator=stingAccumulator ,listofData[i]['title'] 
 	}
-    return stingAccumulator
+    return {"listpub":stingAccumulator}
 }
 
 function viewdetailpub(username, pubid,datadict){
@@ -18,20 +19,11 @@ function viewdetailpub(username, pubid,datadict){
 	
 	for (var i=0; i<listofData.length;i++){
 		if (listofData[i]['pubid']===pubid){
-			return listofData[i]['fullarticle']
+			return {"detailpublication": listofData[i]['fullarticle']}
 		}
 	}
 }
 
 
-function viewdetailpub(username, pubid,datadict){
-	//returns a dictionary {publist}
-	var listofData=datadict[username]
-	
-	for (var i=0; i<listofData.length;i++){
-		if (listofData[i]['pubid']===pubid){
-			return listofData[i]['fullarticle']
-		}
-	}
-}
+
 
