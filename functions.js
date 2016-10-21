@@ -35,3 +35,4 @@ var fullart = 'This has been the most exhilarating and insense experience of my 
 
 console.log(userLogin(user,pass));
 console.log(createJournalEntry(user, tit, fullart));
+
